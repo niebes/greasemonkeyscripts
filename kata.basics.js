@@ -60,6 +60,11 @@ Array.prototype.unique = function () { //copied from... dont know
 	}
 	return a;
 };
+Array.prototype.diff = function(a) {
+    return this.filter(function(i) {
+        return a.indexOf(i) < 0;
+    });
+};
 function empty (mixed_var) { // copied from http://phpjs.org/functions/empty:392
 	var key;
 	if (mixed_var === "" || mixed_var === 0 || mixed_var === "0" || mixed_var === null || mixed_var === false || typeof mixed_var === 'undefined') {
